@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="clear">
+        <mat-icon class="clear-mat-icon" routerLink="/home">clear</mat-icon>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search" [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]="catBreed">
+        <mat-icon class="search-mat-icon" (click)="search()">search</mat-icon>
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="getOptionText" [panelWidth]="300" class="mat-autocomplete">
+            <mat-option *ngFor="let breed of filteredBreeds | async" [value]="breed" class="mat-option">
+                {{breed}}
+            </mat-option>
+        </mat-autocomplete>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+.top-ten {
+    font-weight: 700;
+    font-size: 25px;
+    color: #291507;
+}
+
+.description {
+    padding-top: 50px;
+    display: flex;
+    /* background: blue; */
+    align-items: flex-start;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 25px;
+    color: #291507;
+}
+
+.description img {
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    border-radius: 24px;
+}
+
+.name-description {
+    margin-top: -20px;
+    padding-left: 40px;
+}
+
+
+@media (max-width: 767px) {
+    .top-ten {
+        font-size: 20px;
+    }
+
+    .description {
+        display: block;
+        padding-top: 20px;
+    }
+
+    .name-description {
+        padding-left: 0px;
+    }
+}

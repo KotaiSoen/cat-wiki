@@ -1,0 +1,106 @@
+<app-image-header></app-image-header>
+<div class="container">
+    <img src="{{breedUrl}}">
+    <div *ngFor="let breed of breeds" class="breed-details">
+        <p class="name">{{breed.name}}</p>
+        <p>{{breed.description}}</p>
+        <p><span class="bold">Temperament: </span>{{breed.temperament}}</p>
+        <p><span class="bold">Origin: </span>{{breed.origin}}</p>
+        <p><span class="bold">Life Span: </span>{{breed.life_span}} years</p>
+        <div class="bars">
+            <p class="bold">Adaptability: </p>
+            <div class="round-bar-div-adaptability">
+                <div *ngFor="let _ of [].constructor(breed.adaptability)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.adaptability)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div>  
+        </div>
+        <div class="bars">
+            <p class="bold">Affection level: </p>
+            <div class="round-bar-div-affection">
+                <div *ngFor="let _ of [].constructor(breed.affection_level)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.affection_level)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bars">
+            <p class="bold">Child Friendly: </p>
+            <div class="round-bar-div-child">
+                <div *ngFor="let _ of [].constructor(breed.child_friendly)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.child_friendly)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bars">
+            <p class="bold">Grooming: </p>
+            <div class="round-bar-div-grooming">
+                <div *ngFor="let _ of [].constructor(breed.grooming)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.grooming)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bars">
+            <p class="bold">Intelligence: </p>
+            <div class="round-bar-div-intelligence">
+                <div *ngFor="let _ of [].constructor(breed.intelligence)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.intelligence)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bars">
+            <p class="bold">Health issues: </p>
+            <div class="round-bar-div-health">
+                <div *ngFor="let _ of [].constructor(breed.health_issues)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.health_issues)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bars">
+            <p class="bold">Social needs: </p>
+            <div class="round-bar-div-social">
+                <div *ngFor="let _ of [].constructor(breed.social_needs)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.social_needs)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div> 
+        </div>
+        <div class="bars">
+            <p class="bold">Stranger friendly: </p>
+            <div class="round-bar-div-stranger">
+                <div *ngFor="let _ of [].constructor(breed.stranger_friendly)">
+                    <div class="round-bar"></div>
+                </div>
+                <div *ngFor="let _ of [].constructor(5 - breed.stranger_friendly)">
+                    <div class="round-bar-light"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+

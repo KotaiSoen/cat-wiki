@@ -1,0 +1,12 @@
+<app-image-header></app-image-header>
+<div class="container">
+    <p class="top-ten">Top 10 most searched breeds</p>
+    <div class="description" *ngFor="let breed of mostSearched; let i = index ">
+        <img src="{{breed.image.url}}">
+        <div class="name-description">
+            <p class="name">{{ i+1 }}. {{ breed.name }}</p>
+            <p>{{ breed.description }}</p>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

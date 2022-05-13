@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+p {
+    font-family: 'Montserrat';
+}
+
+input[type=text] {
+    font-family: 'Montserrat';
+}
+
+.logo {
+    filter: brightness(0.9) invert(100%) sepia(.5) hue-rotate(170deg) saturate(200%);
+    object-fit: contain;
+}
+
+.mat-autocomplete {
+    position: relative;
+    top: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+
+.mat-option {
+    font-family: 'Montserrat';
+    font-size: 15px;
+}
+

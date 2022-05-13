@@ -1,0 +1,317 @@
+.main-div {
+    padding-top: 15px;
+}
+
+.image-logo-div {
+    display: flex;
+    background-image: url('../../../assets/HeroImagelg.png');
+    background-size: contain;
+    background-position: right top;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden; 
+}
+
+.search {
+    width: 50%;
+    background-color: #050709;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-bottom: 60px;
+}
+
+.mobile-search {
+    width: 50%;
+    background-color: #050709;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.logo {
+    height: 60px;
+}
+
+p.know-more {
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: -3px;
+}
+
+.search-box {
+    background-color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 8px;
+    margin-top: 40px;
+
+}
+
+.mobile-search-box {
+    background: white;
+    width: 98.62px;
+    height: 29px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.mobile-search-box p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #291507;
+}
+
+.mobile-search-icon {
+    margin-left: 10px;
+    margin-top: 2px;
+    font-size: 18px;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    font-family: 'Montserrat';
+    color: #291507;
+}
+
+mat-icon {
+    font-size: 15px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breeds {
+    padding: 10px 50px 20px;
+    background: #E3E1DC;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.most-searched-breeds {
+    font-size: 13px;
+}
+
+.little-bar {
+    background-color: #4D270C;
+    width: 50px;
+    height: 3px;
+    border-radius: 5px;
+    margin-top: -7px;
+}
+
+.see-more {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    /* background-color: blue; */
+}
+
+.breeds-to-discover {
+    font-weight: 700;
+    font-size: 30px;
+
+    color: #291507;
+
+}
+
+.see-more-right {
+    display: flex;
+    align-items: center;
+    color: rgba(41, 21, 7, 0.6);
+}
+
+.see-more-right p{
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.random-images {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.image-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #291507;
+
+}
+
+.image-div img{
+    height: 220px;
+    width: 220px;
+    border-radius: 24px;
+}
+
+.why-cat {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 70px;
+    display: flex;
+}
+
+
+.why-cat-text {
+    width: 50%;
+    padding-top: 150px;
+}
+
+.second-bar {
+    margin-bottom: -15px;
+}
+
+.why-should {
+    font-weight: 700;
+    font-size: 30px;
+    color: #291507;
+}
+
+.why-cat-images {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-more {
+    padding-top: 15px;
+}
+
+.first-image {
+    width: 273.52px;
+    height: 167.08px;
+}
+
+.second-image {
+    width: 195.49px;
+    height: 293.24px;
+    padding-top: 30px;
+    
+}
+
+.third-image {
+    width: 238.47px;
+    height: 385.87px;
+}
+
+.first-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media (max-width: 767px) {
+
+    .image-logo-div {
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    p.know-more {
+        font-size: 11px;
+        margin-top: 3px;
+    }
+
+    .second-bar {
+        margin-bottom: -5px;
+    }
+
+    .breeds {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 2px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .see-more {
+        display: inline;   
+    }
+
+    .breeds-to-discover {
+        font-size: 20px;
+    }
+
+    .random-images {
+        flex-wrap: wrap;
+    }
+
+    .image-text {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .why-cat {
+        display: inline-block;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 2px;
+    }
+
+    .why-cat-text {
+        width: 100%;
+    }
+
+    .why-should {
+        font-size: 18px;
+    }
+
+    .image-div img{
+        height: 140px;
+        width: 140px;
+        border-radius: 18px;
+    }
+
+    .why-cat-images {
+        width: 100%;
+    }
+
+    .first-image {
+        width: 150px;
+        height: 80px;
+    }
+    
+    .second-image {
+        width: 80px;
+        height: 120px;
+        padding-top: 10px;
+        
+    }
+    
+    .third-image {
+        width: 130px;
+        height: 230px;
+    }
+    
+    
+}
+
+

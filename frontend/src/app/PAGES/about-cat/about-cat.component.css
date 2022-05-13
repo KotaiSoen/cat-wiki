@@ -1,0 +1,146 @@
+.container {
+    display: flex;
+    padding: 20px 30px 0px;
+    justify-content: space-evenly;
+}
+
+.breed-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+img {
+    height: 240px;
+    width: 240px;
+    border-radius: 24px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 44px;
+    /* identical to box height */
+
+
+    color: #291507; 
+
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.bars {
+    display: flex;
+    align-items: center;
+}
+
+.round-bar-div-adaptability {
+    margin-left: 60px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar-div-affection {
+    margin-left: 43px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar-div-child {
+    margin-left: 44px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar-div-grooming {
+    margin-left: 74px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar-div-intelligence {
+    margin-left: 60px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar-div-health {
+    margin-left: 48px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar-div-social {
+    margin-left: 56px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar-div-stranger {
+    margin-left: 22px;
+    margin-top: 2px;
+    display: flex;
+}
+
+.round-bar {
+    height: 8px;
+    width: 40px;
+    background: #544439;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+.round-bar-light {
+    height: 8px;
+    width: 40px;
+    background: #E0E0E0;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+@media (max-width: 767px) {
+    .container {
+        display: block;
+        padding: 10px 5px 0px;
+    }
+
+    .breed-details {
+        width: 100%;
+        display: block;
+        margin-top: 0px;
+    }
+
+    img {
+        height: 300px;
+        width: 300px;
+        border-radius: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .name {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .round-bar {
+        height: 5px;
+        width: 20px;
+        background: #544439;
+        border-radius: 8px;
+        margin-left: 4px;
+    }
+    
+    .round-bar-light {
+        height: 5px;
+        width: 20px;
+        background: #E0E0E0;
+        border-radius: 8px;
+        margin-left: 4px;
+    }
+}

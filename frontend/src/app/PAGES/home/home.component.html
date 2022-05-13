@@ -1,0 +1,76 @@
+<app-image-header></app-image-header>
+<div class="main-div">
+    <div class="image-logo-div">
+        <div class="search" *ngIf="innerWidth >= 768">
+            <img src="./../../../assets/CatwikiLogo.svg" class="logo">
+            <p class="know-more">Get to know more about your<br>cat breed</p>
+            <div class="search-box">
+                <input type="text" placeholder="Enter your breed" [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]="catBreed">
+                <mat-icon (click)="search()" class="search-icon">search</mat-icon>
+                <mat-autocomplete #auto="matAutocomplete" [displayWith]="getOptionText" [panelWidth]="208" class="mat-autocomplete">
+                    <mat-option *ngFor="let breed of filteredBreeds | async" [value]="breed" class="mat-option">
+                        {{breed}}
+                    </mat-option>
+                </mat-autocomplete>
+            </div>
+        </div>
+        <div class="mobile-search" *ngIf="innerWidth <= 767">
+            <img src="./../../../assets/CatwikiLogo.svg" class="logo">
+            <p class="know-more">Get to know more about<br> your cat breed</p>
+            <div class="mobile-search-box" routerLink="/mobile-search">
+                <p>Search</p>
+                <mat-icon class="mobile-search-icon">search</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="breeds">
+        <p class="most-searched-breeds">Most Searched Breeds</p>
+        <div class="little-bar"></div>
+        <div class="see-more">
+            <p class="breeds-to-discover">66+ Breeds For you<br>to discover</p>
+            <div class="see-more-right">
+                <p routerLink="/searched">SEE MORE</p>
+                <mat-icon>arrow_right_alt</mat-icon>
+            </div>
+        </div>
+        <div class="random-images">
+            <div class="image-text" *ngFor="let image of randomImages">
+                <div class="image-div">
+                    <img src="{{image.imageUrl}}">
+                </div>
+                <p>{{image.name}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="why-cat">
+        <div class="why-cat-text">
+            <div class="little-bar second-bar"></div>
+            <p class="why-should" *ngIf="innerWidth >= 768">Why should you <br> have a cat?</p>
+            <p *ngIf="innerWidth >= 768">
+                Having a cat around you can actually trigger the <br>
+                release of calming chemicals in your body which <br>
+                lower your stress and anxiety levels
+            </p>
+            <p class="why-should" *ngIf="innerWidth <= 768">Why should you have a cat?</p>
+            <p *ngIf="innerWidth <= 768">
+                Having a cat around you can actually trigger the
+                release of calming chemicals in your body which
+                lower your stress and anxiety levels
+            </p>
+            <div class="see-more-right read-more">
+                <p>READ MORE</p>
+                <mat-icon>arrow_right_alt</mat-icon>
+            </div>
+        </div>
+        <div class="why-cat-images">
+            <div class="first-column">
+                <img src="../../../assets/image 2.png" class="first-image">
+                <img src="../../../assets/image 1.png" class="second-image">
+            </div>
+            <div class="second-column">
+                <img src="../../../assets/image 3.png" class="third-image">
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
