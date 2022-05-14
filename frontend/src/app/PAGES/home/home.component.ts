@@ -36,7 +36,9 @@ export class HomeComponent implements OnInit {
     this.webReq.getCatBreeds().subscribe((response: any) => {
       this.catBreeds = response;
       for(let i = 0; i < this.catBreeds.length; i++) {
-        this.catBreedsName.push(this.catBreeds[i].name)
+        let capitalBreed = [];
+        capitalBreed.push(this.catBreeds[i].name);
+        this.catBreedsName = capitalBreed.map((value) => value.toLowerCase());
       }
     })
 
@@ -53,6 +55,7 @@ export class HomeComponent implements OnInit {
   }
 
   search() {
+    this.catBreed.toLowerCase();
     if(this.catBreed != '' && this.catBreedsName.includes(this.catBreed)) {
       this.router.navigate(['/about'], { queryParams: {name: this.catBreed}})
     }
