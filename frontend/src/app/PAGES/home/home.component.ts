@@ -53,9 +53,14 @@ export class HomeComponent implements OnInit {
   }
 
   search() {
-    if(this.catBreed != '') {
+    if(this.catBreed != '' && this.catBreedsName.includes(this.catBreed)) {
       this.router.navigate(['/about'], { queryParams: {name: this.catBreed}})
     }
+  }
+
+  redirectToDetails(name: string) {
+    this.catBreed = name;
+    this.search();
   }
 
   private _filter(value: string): string[] {

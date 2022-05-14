@@ -44,7 +44,7 @@ export class MobileSearchComponent implements OnInit {
   }
 
   search() {
-    if(this.catBreed != '') {
+    if(this.catBreed != '' && this.catBreedsName.includes(this.catBreed)) {
       this.router.navigate(['/about'], { queryParams: {name: this.catBreed}})
     }
   }

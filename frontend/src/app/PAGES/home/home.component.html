@@ -6,9 +6,9 @@
             <p class="know-more">Get to know more about your<br>cat breed</p>
             <div class="search-box">
                 <input type="text" placeholder="Enter your breed" [formControl]="myControl" [matAutocomplete]="auto" [(ngModel)]="catBreed">
-                <mat-icon (click)="search()" class="search-icon">search</mat-icon>
+                <mat-icon class="search-icon" (click)="search()">search</mat-icon>
                 <mat-autocomplete #auto="matAutocomplete" [displayWith]="getOptionText" [panelWidth]="208" class="mat-autocomplete">
-                    <mat-option *ngFor="let breed of filteredBreeds | async" [value]="breed" class="mat-option">
+                    <mat-option *ngFor="let breed of filteredBreeds | async" [value]="breed" class="mat-option" (click)="search()">
                         {{breed}}
                     </mat-option>
                 </mat-autocomplete>
@@ -35,7 +35,7 @@
         </div>
         <div class="random-images">
             <div class="image-text" *ngFor="let image of randomImages">
-                <div class="image-div">
+                <div class="image-div" (click)="redirectToDetails(image.name)">
                     <img src="{{image.imageUrl}}">
                 </div>
                 <p>{{image.name}}</p>
