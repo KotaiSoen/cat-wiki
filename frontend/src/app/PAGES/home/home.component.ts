@@ -37,7 +37,6 @@ export class HomeComponent implements OnInit {
       this.catBreeds = response;
       for(let i = 0; i < this.catBreeds.length; i++) {
         this.catBreedsName.push(this.catBreeds[i].name);
-        this.catBreedsName = this.catBreedsName.map((value) => value.toLowerCase());
       }
     })
 
@@ -54,6 +53,7 @@ export class HomeComponent implements OnInit {
   }
 
   search() {
+    this.catBreedsName = this.catBreedsName.map((value) => value.toLowerCase());
     var catBreedLowerCase = this.catBreed.toLowerCase();
     if(catBreedLowerCase != '' && this.catBreedsName.includes(catBreedLowerCase)) {
       this.router.navigate(['/about'], { queryParams: {name: catBreedLowerCase}})
