@@ -30,7 +30,7 @@ export class MobileSearchComponent implements OnInit {
       this.catBreeds = response;
       for(let i = 0; i < this.catBreeds.length; i++) {
         this.catBreedsName.push(this.catBreeds[i].name)
-        this.catBreedsName.map((value) => value.toLowerCase());
+        this.catBreedsName = this.catBreedsName.map((value) => value.toLowerCase());
       }
     })
 

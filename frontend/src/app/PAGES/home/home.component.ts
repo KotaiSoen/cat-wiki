@@ -36,8 +36,8 @@ export class HomeComponent implements OnInit {
     this.webReq.getCatBreeds().subscribe((response: any) => {
       this.catBreeds = response;
       for(let i = 0; i < this.catBreeds.length; i++) {
-        this.catBreedsName.push(this.catBreeds[i].name)
-        this.catBreedsName.map((value) => value.toLowerCase());
+        this.catBreedsName.push(this.catBreeds[i].name);
+        this.catBreedsName = this.catBreedsName.map((value) => value.toLowerCase());
       }
     })
 
