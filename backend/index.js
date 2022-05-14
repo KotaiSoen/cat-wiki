@@ -4,6 +4,8 @@ const cors = require('cors');
 const catRouter = require('./routes/catRouter');
 
 app.use(express.json());
+var distDir = __dirname + "/dist";
+ app.use(express.static(distDir));
 
 //cors middleware
 app.use(cors({
@@ -13,8 +15,8 @@ app.use(cors({
 
 app.use('/cats', catRouter);
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
 })

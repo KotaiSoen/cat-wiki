@@ -7,7 +7,7 @@ import { Breed } from './breed';
 })
 export class WebRequestService {
 
-  url = 'http://localhost:3000/cats';
+  url = "https://sheltered-atoll-27658.herokuapp.com/cats";
 
   constructor(private http: HttpClient) { }
 
