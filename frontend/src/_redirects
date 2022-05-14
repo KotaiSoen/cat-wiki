@@ -1,2 +1,2 @@
-/api/* http://localhost:3000/cats 200 
+/api/* http://localhost:3000 200 
 /*    /index.html    200
