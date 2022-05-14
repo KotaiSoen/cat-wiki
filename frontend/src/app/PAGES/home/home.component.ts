@@ -54,8 +54,8 @@ export class HomeComponent implements OnInit {
   }
 
   search() {
-    this.catBreed.toLowerCase();
     if(this.catBreed != '' && this.catBreedsName.includes(this.catBreed)) {
+      this.catBreed.toLowerCase();
       this.router.navigate(['/about'], { queryParams: {name: this.catBreed}})
     }
   }
